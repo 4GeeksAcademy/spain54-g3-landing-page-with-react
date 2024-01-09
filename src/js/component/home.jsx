@@ -1,7 +1,12 @@
 import React from "react";
-
+import { Jumbotron } from "./Jumbotron.jsx";
 //include images into your bundle
+
 import { Cards } from "./Cards.jsx";
+import rigoImage from "../../img/rigo-baby.jpg";
+import {Footer} from "./Footer.jsx"
+import { Navbar } from "./Navbar.jsx"
+
 //create your first component
 const Home = () => {
 	// Codigo para crear el placeholder de las 4 cards
@@ -13,11 +18,12 @@ const Home = () => {
 	];
 
 	return (
-		<>
-			
-				<Cards valores={arrayPlaceholder} />
-		
-		</>
+		<div>
+		<Navbar />
+    <Jumbotron/>
+    <Cards valores={arrayPlaceholder} />
+    <Footer/>
+    </div>
 	);
 };
 
